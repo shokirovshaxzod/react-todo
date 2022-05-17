@@ -245,8 +245,11 @@ input {
 }
 
 @media(max-width:700px) {
-  .headBox {
+  * {
     overflow: hidden;
+  }
+
+  .headBox {
     margin-bottom: 20px;
     width: 350px
   }
@@ -254,15 +257,19 @@ input {
   .headBox,
   .todo,
   .todo-all {
+    margin-left: 10px;
     width: 340px;
   }
 
   .todo {
-    width: 350px
+    margin-top: 10px;
+    width: 350px;
+    margin-left: 1px;
   }
 
   .todo-all {
-    width: 390px;
+    margin-left: 1px;
+    width: 350px;
   }
 
   form input {
