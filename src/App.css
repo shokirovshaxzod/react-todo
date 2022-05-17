@@ -246,6 +246,7 @@ input {
 
 @media(max-width:700px) {
   .headBox {
+    overflow: hidden;
     margin-bottom: 20px;
     width: 350px
   }
