@@ -246,18 +246,25 @@ input {
 
 @media(max-width:700px) {
   .headBox {
-    max-width: 390px
+    margin-bottom: 20px;
+    width: 350px
+  }
+
+  .headBox,
+  .todo,
+  .todo-all {
+    width: 340px;
   }
 
   .todo {
-    max-width: 390px
+    width: 350px
   }
 
   .todo-all {
-    max-width: 390px;
+    width: 390px;
   }
 
   form input {
-    max-width: 312px;
+    width: 290px;
   }
 }
