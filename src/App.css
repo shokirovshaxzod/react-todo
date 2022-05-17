@@ -1,38 +1,245 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
+body {
+  color: rgba(73, 76, 107, 1);
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+.App {
+  background-image: url("../public/img/bg-desktop-light.jpg");
+  width: 100%;
+  height: 300px;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.dark {
+  background-image: url("../public/img/bg-desktop-dark.jpg");
+}
+
+
+.boxAppp {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.boxAppDar {
+  background-color: black;
+  z-index: -1;
+}
+
+.headBox {
+  width: 539px;
+  height: 37px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.todo-containerBox div {
+  color: #f3f3f3;
+  background-color: rgba(57, 58, 75, 1);
+}
+
+.todo-input {
+  color: #f3f3f3;
+  background-color: rgba(57, 58, 75, 1);
+}
+
+.toggle {
+  cursor: pointer;
+  color: #fff;
+}
+
+.headBox h1 {
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 40px;
+  letter-spacing: 15px;
+  margin: 0;
+  color: #fff;
+}
+
+header {
+  font-size: 2rem;
+}
+
+header,
+form {
+  width: 100%;
+  min-height: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+form input {
+  width: 100%;
+  height: 64px;
+  font-size: 2rem;
+  border: none;
+  background: white;
+  border-radius: 0 5px 5px 0;
+}
+
+form button {
+  background: #FFFFFF;
+  cursor: pointer;
+  border-radius: 5px 0 0 5px;
+}
+
+.todo-button {
+  border: none;
+  width: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 64px;
+}
+
+.todo-all {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border: 1px solid #E3E4F1;
+  width: 540px;
+  height: 64px;
+  border-radius: 5px;
+}
+
+.todo-none {
+  display: none
+}
+
+.all {
+  cursor: pointer;
+  color: rgba(58, 124, 253, 1);
+  transition: all 0.2s ease;
+}
+
+.all:hover {
+  color: rgba(148, 149, 165, 1);
+}
+
+.Completed {
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.Completed:hover {
+  color: rgba(58, 124, 253, 1);
+}
+
+input {
+  height: 100%;
+  box-shadow: none;
+  border: none;
+  outline: none;
+}
+
+.chek {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: 1px solid #E3E4F1;
+}
+
+.todo-buttonDark {
+  background-color: rgba(57, 58, 75, 1);
+}
+
+
+.todo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+
+}
+
+.todo-list {
+  min-width: 30%;
+  list-style: none;
+  padding: 0;
+}
+
+.todo {
+  overflow: hidden;
+  width: 540px;
+  background: white;
+  font-size: 1.5rem;
+  border-radius: 5px;
+  border-bottom: 1px solid #E3E4F1;
+  color: black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.filter-todo {
+  padding: 1rem;
+}
+
+.todo li {
+  flex: 1;
+}
+
+
+.trash-btn,
+.complete-btn {
+  border: none;
+  height: 64px;
+  cursor: pointer;
+  font-size: 1rem;
+  background: none;
+}
+
+.btnBoxs {
+  margin-right: 15px;
+}
+
+.complete-btn {
+  margin-left: 10px;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-image: url("../public/img/icon-check.svg");
+  background: none;
+  border: 1px solid #E3E4F1;
+}
+
+.complete-dark {
+  border: none;
+  background-image: url("../public/img/icon-check.svg")
+}
+
+.todo-item {
+  padding: 0rem 0.5rem;
+}
+
+.fa-trash,
+.fa-check {
   pointer-events: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.fall {
+  transform: translateY(10rem) rotateZ(20deg);
+  opacity: 0;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.completed {
+  text-decoration: line-through;
+  opacity: 0.5;
 }
